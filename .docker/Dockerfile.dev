@@ -1,0 +1,14 @@
+FROM node:18-alpine
+EXPOSE 3000 50051 8080
+
+RUN npm install -g npm
+
+RUN npm install -g typescript
+RUN npm install -g ts-node
+RUN npm install -g ts-node-dev
+
+# nest
+RUN npm install -g @nestjs/cli
+
+# ncu -u
+# RUN npm install -g npm-check-updates
