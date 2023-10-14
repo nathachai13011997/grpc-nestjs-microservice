@@ -13,6 +13,8 @@ Learners want to upskill and understand grpc
 	``` bash
 	npm install
 	```
+> Note : server client http://localhost:3000
+
 **micr1**
 - open terminal or cmd
 - cd ...\grpc-nestjs-microservice\microservices\micr1
@@ -34,8 +36,6 @@ Learners want to upskill and understand grpc
 	``` bash
 	docker compose up -d
 	```
-Note : http://localhost:3000
-
 
 ## Architecture	
 ![alt text](https://github.com/nathachai13011997/grpc-nestjs-microservice/blob/main/assets/grpc.png?raw=true)
