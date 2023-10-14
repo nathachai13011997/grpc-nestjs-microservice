@@ -13,7 +13,7 @@ Learners want to upskill and understand grpc
 	``` bash
 	npm install
 	```
-> Note : server client http://localhost:3000
+> Note : server client => http://localhost:3000
 
 **micr1**
 - open terminal or cmd
