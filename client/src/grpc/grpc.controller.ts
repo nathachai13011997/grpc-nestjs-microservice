@@ -1,19 +1,16 @@
-import { Controller, Get, OnModuleInit, Body } from '@nestjs/common';
-import { Client, ClientGrpc } from '@nestjs/microservices';
+import { Controller, Get, OnModuleInit, Body, Inject } from '@nestjs/common';
+import { ClientGrpc } from '@nestjs/microservices';
 import { Client1Dto } from './dto/client1.dto';
 import { Client2Dto } from './dto/client2.dto';
-import { grpcClientOptions1 } from './client1';
-import { grpcClientOptions2 } from './client2';
 import { Micr1Service, Micr1 } from './proto/micr1';
 import { Micr2Service, Micr2 } from './proto/micr2';
 
 @Controller('grpc')
 export class GrpcController implements OnModuleInit {
-  @Client(grpcClientOptions1)
-  private readonly client1: ClientGrpc;
-
-  @Client(grpcClientOptions2)
-  private readonly client2: ClientGrpc;
+  constructor(
+    @Inject('CLIENT1_PACKAGE') private readonly client1: ClientGrpc,
+    @Inject('CLIENT2_PACKAGE') private readonly client2: ClientGrpc,
+  ) {}
 
   private micr1Service: Micr1Service;
   private micr2Service: Micr2Service;

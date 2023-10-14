@@ -1,11 +1,7 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { GrpcController } from './grpc/grpc.controller';
-import { AppService } from './app.service';
+import { GrpcModule } from './grpc/grpc.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController, GrpcController],
-  providers: [AppService],
+  imports: [GrpcModule],
 })
 export class AppModule {}
