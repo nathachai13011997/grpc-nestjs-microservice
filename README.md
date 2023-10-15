@@ -1,4 +1,4 @@
-# NestJS + GRPC + Microservice
+# GRPC + NestJS Microservice
 
 Learners want to upskill and understand grpc
 
